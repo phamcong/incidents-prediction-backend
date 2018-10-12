@@ -4,6 +4,8 @@ from django.forms.models import model_to_dict
 from django.http import JsonResponse
 from django.http import HttpResponse, HttpResponseNotFound
 from rest_framework.parsers import JSONParser
+from incidentsprediction.predictionmodels import *
+
 
 # Create your views here.
 def predmodel_list(request):
