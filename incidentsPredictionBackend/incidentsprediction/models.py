@@ -34,6 +34,7 @@ class Parameter(models.Model):
 class PredictModel(models.Model):
     name = models.CharField(max_length=100, blank=False, default='')
     label = models.CharField(max_length=100, blank=False, default='')
+    function_name = models.CharField(max_length= 100, blank=True, default='')
     parameters = models.ManyToManyField(Parameter)
 
     def __str__(self):

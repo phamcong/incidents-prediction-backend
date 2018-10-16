@@ -19,5 +19,6 @@ from django.conf.urls import url
 from incidentsprediction import views
 
 urlpatterns = [
-    url(r'^api/predictionmodels/$', views.predmodel_list)
+    url(r'^api/predictionmodels/$', views.predmodel_list),
+    url(r'^api/predictionmodels/(?P<id>\d+)/$', views.predmodel),
 ]
