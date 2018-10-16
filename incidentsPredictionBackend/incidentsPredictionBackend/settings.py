@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'incidentsprediction',
+    'incidentsprediction.apps.IncidentspredictionConfig',
+    'groupamasi.apps.GroupamasiConfig',
     'rest_framework',
     'corsheaders',
 ]
@@ -87,14 +88,28 @@ WSGI_APPLICATION = 'incidentsPredictionBackend.wsgi.application'
 #     }
 # }
 
-DATABASES = {  
+DATABASE_ROUTERS = ['incidentsPredictionBackend.routers.PredictionModelRouter', 'incidentsPredictionBackend.routers.GroupamaSIRouter']
+
+DATABASES = { 
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'predictionmodel_db': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'icdpreddb',                                # Or path to database file if using sqlite3.
+        'NAME': 'predictionmodelDB',                        # Or path to database file if using sqlite3.
         'USER': 'admin',                                    # Not used with sqlite3.
         'PASSWORD': 'Ad_123456',                            # Not used with sqlite3.
         'HOST': 'localhost',                                # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '5432',                                     # Set to empty string for default. Not used with sqlite3.
+    },
+    'groupamasi_db': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'NAME': 'groupamasiDB',                            
+        'USER': 'admin',                                    
+        'PASSWORD': 'Ad_123456',                            
+        'HOST': 'localhost',                                
+        'PORT': '5432',  
     }
 }
 

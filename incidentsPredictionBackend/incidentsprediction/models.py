@@ -21,6 +21,10 @@ class Value(models.Model):
         else:
             super(Value, self).save(*args, **kwargs)
 
+    class Meta:
+        app_label = 'predictionmodel'
+
+
 # Each model contains many parameters
 class Parameter(models.Model):
     name = models.CharField(max_length=100, blank=False, default='')
@@ -29,6 +33,10 @@ class Parameter(models.Model):
 
     def __str__(self):
         return self.name
+        
+    class Meta:
+        app_label = 'predictionmodel'
+
 
 # Predict Model
 class PredictModel(models.Model):
@@ -39,3 +47,6 @@ class PredictModel(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        app_label = 'predictionmodel'
