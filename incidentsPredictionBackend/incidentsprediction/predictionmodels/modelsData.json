@@ -1,0 +1,84 @@
+{
+    "models": [
+        {
+            "name": "BayesNet",
+            "label": "Bayes Net",
+            "function_name": "bayesNet",
+            "parameters": [
+                {
+                    "name": "commitNumber",
+                    "label": "Commit Number",
+                    "type_value": "string",
+                    "values": ["Low", "Medium", "High"]
+                },
+                {
+                    "name": "numberOfDeveloper",
+                    "label": "Number Of Developer",
+                    "type_value": "string",
+                    "values": ["Low", "Medium", "High"]
+                },
+                {
+                    "name": "buildFailures",
+                    "label": "Build Failures",
+                    "type_value": "number",
+                    "values": [0]
+                },
+                {
+                    "name": "numberOfFixedBug",
+                    "label": "Number Of Fixed Bug",
+                    "type_value": "number",
+                    "values": [0, 1]
+                },
+                {
+                    "name": "numberOfFunctionalEvolution",
+                    "label": "Number Of Functional Evolution",
+                    "type_value": "string",
+                    "values": ["Low", "Medium", "High"]
+                }
+            ]
+        },
+        {
+            "name": "ReleaseBayesNet",
+            "label": "Release Bayes Net",
+            "function_name": "releaseBayesNet",
+            "parameters": [
+                {
+                    "name": "requirementsProcessQuality",
+                    "label": "Requirements Process Quality",
+                    "type_value": "string",
+                    "values": ["Low", "Medium", "High"]
+                },
+                {
+                    "name": "requirementsEffort",
+                    "label": "Requirements Effort",
+                    "type_value": "string",
+                    "values": ["Low", "Medium", "High"]
+                },
+                {
+                    "name": "implementationProcessQuality",
+                    "label": "Implementation Process Quality",
+                    "type_value": "string",
+                    "values": ["Low", "Medium", "High"]
+                },
+                {
+                    "name": "implementationEffort",
+                    "label": "Implementation Effort",
+                    "type_value": "string",
+                    "values": ["Low", "Medium", "High"]
+                },
+                {
+                    "name": "testingProcessQuality",
+                    "label": "Testing Process Quality",
+                    "type_value": "string",
+                    "values": ["Low", "Medium", "High"]
+                },
+                {
+                    "name": "testingEffort",
+                    "label": "Testing Effort",
+                    "type_value": "string",
+                    "values": ["Low", "Medium", "High"]
+                }                
+            ]
+        }
+   ]
+}

@@ -54,12 +54,18 @@ def bayesNet(evs):
     
     bn
 
-    # ie=gum.LazyPropagation(bn)
-    # ie.makeInference()
-    #ie.posterior(buildFailures)
-    # ie.posterior(categoryOfIncident)
-    #ie.posterior(numberOfFixedBug)
+    output_parameters_labels = ['Incident Cateogry']
+    ie = gum.LazyPropagation(bayesNet)
+    ie.setEvidence(evs)
+    ie.makeInference()
+    resultCSV = []
+    resultCSV.append('Parameter, Low, Medium, High')
+    for output_parameter_label in output_parameters_labels:
+        results = ie.posterior(output_parameter_label).tolist()
+        resultCSV.append(output_parameter_label + ', ' + str(round(results[0],3)) + ', ' + str(round(results[1],3)) + ', ' + str(round(results[2])))
+
     #gnb.showInference(bn,evs={})
     resultBytes = BNinference2dot(bn, evs=evs).create(format='png')
     resultBytesStr = base64.b64encode(resultBytes)
-    return resultBytesStr
+    
+    return resultBytesStr, resultCSV

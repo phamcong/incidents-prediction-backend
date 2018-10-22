@@ -41,9 +41,10 @@ def predmodel(request, id):
         model = PredictModel.objects.get(id=id)
         request_data = JSONParser().parse(request)
         parameters = request_data['parameters']
-        result = str(globals()[model.function_name](parameters)) # execute function with name stored as string in variable.
-        print(result[2:-1])
-        return JsonResponse({ 'result': result[2:-1] }) 
+        print(model.function_name)
+        print(parameters)
+        resultImageBase64, resultCSV = globals()[model.function_name](parameters) # execute function with name stored as string in variable.
+        return JsonResponse({ 'resultImageBase64': str(resultImageBase64)[2:-1], 'resultCSV': resultCSV }) 
         # TODO: import new model into database
     else:
         pass
