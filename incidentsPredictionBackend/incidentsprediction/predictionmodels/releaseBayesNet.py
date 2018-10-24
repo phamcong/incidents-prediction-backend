@@ -205,13 +205,13 @@ def releaseBayesNet(evs):
     ie.setEvidence(evs)
     ie.makeInference()
     resultCSV = []
-    resultCSV.append('Parameter, Acceptable, Non-acceptable')
+    resultCSV.append('Parameter, Acceptable')
     for output_parameter_label in output_parameters_labels:
         results = ie.posterior(output_parameter_label).tolist()
-        resultCSV.append(output_parameter_label + ', ' + str(round(results[0],3)) + ', ' + str(round(results[1], 3)))
+        resultCSV.append(output_parameter_label + ', ' + str(round(results[0],3)))
 
     print(resultCSV)
-    resultBytes = BNinference2dot(bayesNet, evs=evs, size="20").create(format='png')
+    resultBytes = BNinference2dot(bayesNet, evs=evs, size="25", targets={'Efficiency', 'Satisfaction', 'Effectiveness', 'Usability Compliance', 'Reliability Compliance', 'Availability', 'Fault Tolerance', 'Recoverability', 'Maturity'}).create(format='png')
     resultBytesStr = base64.b64encode(resultBytes)
 
     return resultBytesStr, resultCSV

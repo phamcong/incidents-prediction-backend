@@ -48,24 +48,19 @@ def bayesNet(evs):
     bayesNets.cpt(categoryOfIncident)[{'Build Failures': 0,'Number Of Fixed Bug':0}] = [0.2,0.3,0.5]
     bayesNets.cpt(categoryOfIncident)[{'Build Failures': 0,'Number Of Fixed Bug':1}] = [0.5,0.3,0.2]
     bayesNets.cpt(categoryOfIncident)
-    ie=gum.LazyPropagation(bayesNets)
-    gum.saveBN(bayesNets, "QualtiyPrediction.bifxml")
-    bn = gum.loadBN("QualtiyPrediction.bifxml")
-    
-    bn
 
-    output_parameters_labels = ['Incident Cateogry']
-    ie = gum.LazyPropagation(bayesNet)
+    output_parameters_labels = ['Incident Category']
+    ie = gum.LazyPropagation(bayesNets)
     ie.setEvidence(evs)
     ie.makeInference()
     resultCSV = []
     resultCSV.append('Parameter, Low, Medium, High')
     for output_parameter_label in output_parameters_labels:
         results = ie.posterior(output_parameter_label).tolist()
-        resultCSV.append(output_parameter_label + ', ' + str(round(results[0],3)) + ', ' + str(round(results[1],3)) + ', ' + str(round(results[2])))
+        resultCSV.append(output_parameter_label + ', ' + str(round(results[0],3)) + ', ' + str(round(results[1],3)) + ', ' + str(round(results[2],3)))
 
     #gnb.showInference(bn,evs={})
-    resultBytes = BNinference2dot(bn, evs=evs).create(format='png')
+    resultBytes = BNinference2dot(bayesNets, evs=evs).create(format='png')
     resultBytesStr = base64.b64encode(resultBytes)
     
     return resultBytesStr, resultCSV
