@@ -11,6 +11,10 @@ class Value(models.Model):
     type_value = models.CharField(max_length=10, choices=TYPE_CHOICES, default="STRING")
     value = models.CharField(max_length=100, blank=False, default='')
 
+    class Meta:
+        app_label = 'predictionmodel'
+        managed = True
+    
     def __str__(self):
         return self.type_value + ':' + self.value
 
@@ -21,8 +25,7 @@ class Value(models.Model):
         else:
             super(Value, self).save(*args, **kwargs)
 
-    class Meta:
-        app_label = 'predictionmodel'
+
 
 
 # Each model contains many parameters

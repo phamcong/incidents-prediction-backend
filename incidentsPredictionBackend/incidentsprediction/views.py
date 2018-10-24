@@ -4,9 +4,10 @@ from django.forms.models import model_to_dict
 from django.http import JsonResponse
 from django.http import HttpResponse, HttpResponseNotFound
 from rest_framework.parsers import JSONParser
-from incidentsprediction.models import *
 from django.views.decorators.csrf import csrf_exempt
+from incidentsprediction.predictionmodels import *
 
+import json
 
 # Create your views here.
 def predmodel_list(request):
@@ -41,7 +42,13 @@ def predmodel(request, id):
         model = PredictModel.objects.get(id=id)
         request_data = JSONParser().parse(request)
         parameters = request_data['parameters']
-        result = str(globals()[model.function_name](parameters)) # execute function with name stored as string in variable.
+        evs = {}
+        for parameter in parameters:
+            selected_value = parameter['selected_value']
+            evs[parameter['label']] = selected_value['value'] if selected_value['type_value'] == 'string' else int(selected_value['value'])
+        print(evs)
+        # evs = {"Commit Number":"High","Number Of Fixed Bug":"1","Number Of Developer":"High","Build Failures":0}
+        result = str(globals()[model.function_name](evs)) # execute function with name stored as string in variable.
         print(result[2:-1])
         return JsonResponse({ 'result': result[2:-1] }) 
         # TODO: import new model into database
