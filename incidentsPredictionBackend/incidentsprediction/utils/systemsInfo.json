@@ -1,0 +1,248 @@
+{
+    "systemsInfo": {
+        "engineers": [
+            {
+                "eng_fn": "Alexandre",
+                "eng_ln": "DUPONT",
+                "company": "GROUPAMA",
+                "departement": "Informatique",
+                "function": "Developper"
+            },
+            {
+                "eng_fn": "Bertrand",
+                "eng_ln": "DURUPT",
+                "company": "GROUPAMA",
+                "departement": "Informatique",
+                "function": "Developper"
+            },
+            {
+                "eng_fn": "Thibault",
+                "eng_ln": "EYNARD",
+                "company": "GROUPAMA",
+                "departement": "Informatique",
+                "function": "Developper"
+            },
+            {
+                "eng_fn": "Fabien",
+                "eng_ln": "MATTA",
+                "company": "GROUPAMA",
+                "departement": "Informatique",
+                "function": "Developper"
+            }
+        ],
+        "systemofsystems": [
+            {
+                "name": "SiCaps",
+                "owner": "Thibault EYNARD"
+            },
+            {
+                "name": "SiAmaline",
+                "owner": "Fabien MATTA"
+            }
+        ],
+        "systems": [
+            {
+                "systemofsystem": "SiCaps",
+                "name": "Accapulco",
+                "owner": "Alexandre DUPONT",
+                "type": "primary"
+            },
+            {
+                "systemofsystem": "SiAmaline",
+                "name": "Actifs et configurations SI",
+                "owner": "Bertrand DURUPT",
+                "type": "secondary"
+            },
+            {
+                "systemofsystem": "SiAmaline",
+                "name": "AMAGUIZ",
+                "owner": "Alexandre DUPONT",
+                "type": "primary"
+            },
+            {
+                "systemofsystem": "SiAmaline",
+                "name": "Annuaires",
+                "owner": "Fabien MATTA",
+                "type": "secondary"
+            },
+            {
+                "systemofsystem": "SiCaps",
+                "name": "Archivage",
+                "owner": "Bertrand DURUPT",
+                "type": "primary"
+            },
+            {
+                "systemofsystem": "SiCaps",
+                "name": "Assurétat",
+                "owner": "Thibault EYNARD",
+                "type": "primary"
+            }
+        ],
+        "applicationsystems": [
+            {
+                "name": "Accapulco AT",
+                "owner": "Bertrand DURUPT",
+                "system": "Accapulco"
+            },
+            {
+                "name": "Accapulco Bali Net",
+                "owner": "Bertrand DURUPT",
+                "system": "Accapulco"
+            },
+            {
+                "name": "Accapulco BDI",
+                "owner": "Thibault EYNARD",
+                "system": "Accapulco"
+            },
+            {
+                "name": "Accapulco CLICO",
+                "owner": "Alexandre DUPONT",
+                "system": "Accapulco"
+            },
+            {
+                "name": "Accapulco COCA",
+                "owner": "Thibault EYNARD",
+                "system": "Accapulco"
+            },
+            {
+                "name": "Accapulco Compta Tech",
+                "owner": "Thibault EYNARD",
+                "system": "Accapulco"
+            },
+            {
+                "name": "Accapulco CUBA",
+                "owner": "Thibault EYNARD",
+                "system": "Accapulco"
+            },
+            {
+                "name": "ASSET CENTER",
+                "owner": "Fabien MATTA",
+                "system": "Actifs et configurations SI"
+            },
+            {
+                "name": "ATRIUM CMDB",
+                "owner": "Thibault EYNARD",
+                "system": "Actifs et configurations SI"
+            },
+            {
+                "name": "BELUGA",
+                "owner": "Bertrand DURUPT",
+                "system": "Actifs et configurations SI"
+            },
+            {
+                "name": "BIFROST",
+                "owner": "Thibault EYNARD",
+                "system": "Actifs et configurations SI"
+            },
+            {
+                "name": "BladeLogic",
+                "owner": "Alexandre DUPONT",
+                "system": "Actifs et configurations SI"
+            },
+            {
+                "name": "CACTI G2S",
+                "owner": "Bertrand DURUPT",
+                "system": "Actifs et configurations SI"
+            },
+            {
+                "name": "CFT",
+                "owner": "Thibault EYNARD",
+                "system": "Actifs et configurations SI"
+            },
+            {
+                "name": "CIRRUS",
+                "owner": "Fabien MATTA",
+                "system": "Actifs et configurations SI"
+            },
+            {
+                "name": "AMAGUIZ BO",
+                "owner": "Alexandre DUPONT",
+                "system": "AMAGUIZ"
+            },
+            {
+                "name": "AMAGUIZ COM",
+                "owner": "Bertrand DURUPT",
+                "system": "AMAGUIZ"
+            },
+            {
+                "name": "Site partenaire Amaguiz Casino",
+                "owner": "Thibault EYNARD",
+                "system": "AMAGUIZ"
+            },
+            {
+                "name": "Sites partenaires Amaguiz",
+                "owner": "Fabien MATTA",
+                "system": "AMAGUIZ"
+            }
+        ],
+        "inputparameters": [
+            {
+                "name": "numberOfDevelopers",
+                "label": "Nb Of Developers",
+                "type_value": "string"
+            },
+            {
+                "name": "numberOfCommits",
+                "label": "Nb Of Commits",
+                "type_value": "string"
+            },
+            {
+                "name": "numberOfImpactedBranches",
+                "label": "Nb Of Impacted Branches",
+                "type_value": "string"
+            },
+            {
+                "name": "implementationEffectiveness",
+                "label": "Implementation Effectiveness",
+                "type_value": "string"
+            },
+            {
+                "name": "numberOfFunctionalEvolutions",
+                "label": "Nb Of Functional Evolutions",
+                "type_value": "string"
+            },
+            {
+                "name": "numberOfTechnicalEvolutions",
+                "label": "Nb Of Technical Evolutions",
+                "type_value": "string"
+            },
+            {
+                "name": "evolution",
+                "label": "Evolution",
+                "type_value": "string"
+            },
+            {
+                "name": "numberOfDefects",
+                "label": "Nb Of Defects",
+                "type_value": "string"
+            },
+            {
+                "name": "gravityOfDefects",
+                "label": "Gravity Of Defects",
+                "type_value": "string"
+            },
+            {
+                "name": "numberOfFixedDefects",
+                "label": "Nb Of Fixed Defects",
+                "type_value": "string"
+            },
+            {
+                "name": "testingEffectiveness",
+                "label": "Testing Effectiveness",
+                "type_value": "string"
+            }
+        ],
+        "outputparameters": [
+            {
+                "name": "incident",
+                "label": "Incident",
+                "type_value": "number"
+            },
+            {
+                "name": "availability",
+                "label": "Availability",
+                "type_value": "number"
+            }
+        ]
+    }
+}

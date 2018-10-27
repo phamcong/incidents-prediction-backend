@@ -1,0 +1,139 @@
+{
+    "modelsInfo": [
+        {
+            "function_name": "releaseBayesNet",
+            "name": "ReleaseBayesNet",
+            "parameters": [
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "numberOfDevelopers",
+                    "label": "Nb Of Developers"
+                },
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "numberOfCommits",
+                    "label": "Nb Of Commits"
+                },
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "numberOfImpactedBranches",
+                    "label": "Nb Of Impacted Branches"
+                },
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "implementationEffectiveness",
+                    "label": "Implementation Effectiveness"
+                },
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "numberOfFunctionalEvolutions",
+                    "label": "Nb Of Functional Evolutions"
+                },
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "numberOfTechnicalEvolutions",
+                    "label": "Nb Of Technical Evolutions"
+                },
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "evolution",
+                    "label": "Evolution"
+                },
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "numberOfDefects",
+                    "label": "Nb Of Defects"
+                },
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "gravityOfDefects",
+                    "label": "Gravity Of Defects"
+                },
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "numberOfFixedDefects",
+                    "label": "Nb Of Fixed Defects"
+                },
+                {
+                    "values": [
+                        "Low",
+                        "Medium",
+                        "High"
+                    ],
+                    "type_value": "string",
+                    "name": "testingEffectiveness",
+                    "label": "Testing Effectiveness"
+                },
+                {
+                    "values": [
+                        "Acceptable",
+                        "Non Acceptable"
+                    ],
+                    "type_value": "string",
+                    "name": "incident",
+                    "label": "Incident"
+                },
+                {
+                    "values": [
+                        "Acceptable",
+                        "Non Acceptable"
+                    ],
+                    "type_value": "string",
+                    "name": "availability",
+                    "label": "Availability"
+                }
+            ],
+            "label": "Release Bayes Net"
+        }
+    ]
+}
