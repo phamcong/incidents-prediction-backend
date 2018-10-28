@@ -58,24 +58,6 @@
                 "name": "AMAGUIZ",
                 "owner": "Alexandre DUPONT",
                 "type": "primary"
-            },
-            {
-                "systemofsystem": "SiAmaline",
-                "name": "Annuaires",
-                "owner": "Fabien MATTA",
-                "type": "secondary"
-            },
-            {
-                "systemofsystem": "SiCaps",
-                "name": "Archivage",
-                "owner": "Bertrand DURUPT",
-                "type": "primary"
-            },
-            {
-                "systemofsystem": "SiCaps",
-                "name": "Assurétat",
-                "owner": "Thibault EYNARD",
-                "type": "primary"
             }
         ],
         "applicationsystems": [
